@@ -1,0 +1,20 @@
+[Version]
+Signature="$CHICAGO$"
+Provider=cexo255@163.com, 2011
+
+[DefaultInstall]
+AddReg=Install_AddReg
+
+[DefaultUnInstall]
+DelReg=Uninstall_DelReg
+
+[Uninstall_DelReg]
+hkcr,"*\Shell\CPYCompiler"
+hkcr,"Directory\Shell\CPYCompiler"
+
+[Install_AddReg]
+hkcr,"*\Shell\CPYCompiler",,,"Closure Packer YUI Compiler(&G)"
+hkcr,"*\Shell\CPYCompiler\command",,,"""%01%\compiler.cmd"" ""%%1"""
+hkcr,"Directory\Shell\CPYCompiler",,,"Closure Packer YUI Compiler(&G)"
+hkcr,"Directory\Shell\CPYCompiler\command",,,"""%01%\compiler_path.cmd"" ""%%1"""
+
